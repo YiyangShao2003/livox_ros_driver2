@@ -143,13 +143,13 @@ class Lddc final {
 #ifdef BUILDING_ROS1
   bool enable_lidar_bag_;
   bool enable_imu_bag_;
-  PublisherPtr private_pub_[kMaxSourceLidar];
+  PublisherPtr private_pub_[1];
   PublisherPtr global_pub_;
   PublisherPtr private_imu_pub_[kMaxSourceLidar];
   PublisherPtr global_imu_pub_;
   rosbag::Bag *bag_;
 #elif defined BUILDING_ROS2
-  PublisherPtr private_pub_[kMaxSourceLidar];
+  PublisherPtr private_pub_[2];
   PublisherPtr global_pub_;
   PublisherPtr private_imu_pub_[kMaxSourceLidar];
   PublisherPtr global_imu_pub_;
